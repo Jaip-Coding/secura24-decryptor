@@ -10,6 +10,8 @@ function encrypt() {
     const possible_chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!"§$%&/()=?+*#-_.:,;<>@ \n';
     let chars_to_use = possible_chars;
     let encrypted_chars = '';
+    let key = document.getElementById('keyInput').innerText;
+    let user_input = document.getElementById('userInput').innerText;
 
     const sort_key = parseInt(key.slice(-1));
     let key_list = key.match(/\d+/g);
