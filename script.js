@@ -14,7 +14,7 @@ function decrypt() {
     let user_input = document.getElementById('userInput').innerText;
     //let user_input = get_user_input.replace("\\n", "\n");
 
-    alert(key.slice(-1);
+    alert(key.slice(-1));
 
     const sort_key = parseInt(key.slice(-1));
     let key_list = key.match(/\d+/g);
