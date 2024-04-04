@@ -14,30 +14,18 @@ function decrypt() {
     let user_input = document.getElementById('userInput').innerText;
     //let user_input = get_user_input.replace("\\n", "\n");
 
-    alert(key);
-
-    alert(key.slice(-1));
-    alert(key.slice(-2));
-
-    const sort_key = parseInt(key.slice(-1));
+    let sort_key = parseInt(key.slice(-1));
+    if (isNaN(sort_key)) {
+      sort_key = parseInt(key.slice(-2));
+    }
     let key_list = key.match(/\d+/g);
     key_list.pop();
-
-    alert(sort_key);
-
-    /*function sortChars(list, char1, char2) {
-      const sort_elements = [list[char1], list[char2]];
-      [list[char2], list[char1]] = sort_elements;
-      return list;
-    }*/
 
     let sort_number = 0;
     while (sort_number + sort_key < key_list.length) {
       sortChars(key_list, sort_number + sort_key, sort_number);
       sort_number += sort_key * 2;
     }
-
-    alert(key_list);
 
     for (let char of key_list) {
       encrypted_chars += chars_to_use[parseInt(char)];
