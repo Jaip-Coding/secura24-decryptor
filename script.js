@@ -18,11 +18,11 @@ function decrypt() {
     let key_list = key.match(/\d+/g);
     key_list.pop();
 
-    function sortChars(list, char1, char2) {
+    /*function sortChars(list, char1, char2) {
       const sort_elements = [list[char1], list[char2]];
       [list[char2], list[char1]] = sort_elements;
       return list;
-    }
+    }*/
 
     let sort_number = 0;
     while (sort_number + sort_key < key_list.length) {
