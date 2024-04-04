@@ -1,7 +1,7 @@
 // Secura24 Decryptor
 
 function sortChars(list, char1, char2) {
-    const sort_elements = [list[char1], list[char2]];
+    let sort_elements = [list[char1], list[char2]];
     [list[char2], list[char1]] = sort_elements;
     return list;
 }
@@ -26,7 +26,7 @@ function decrypt() {
 
     let sort_number = 0;
     while (sort_number + sort_key < key_list.length) {
-      key_list = sortChars(key_list, sort_number + sort_key, sort_number);
+      sortChars(key_list, sort_number + sort_key, sort_number);
       sort_number += sort_key * 2;
     }
 
