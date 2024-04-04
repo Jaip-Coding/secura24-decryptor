@@ -7,7 +7,7 @@ function sortChars(list, char1, char2) {
 }
 
 function decrypt() {
-    const possible_chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!"§$%&/()=?+*#-_.:,;<>@ \n';
+    const possible_chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!"§$%&/()=?+*#-_.:,;<>@ ';
     let chars_to_use = possible_chars;
     let encrypted_chars = '';
     let key = document.getElementById('keyInput').innerText;
