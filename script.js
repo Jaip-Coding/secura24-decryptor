@@ -17,6 +17,7 @@ function decrypt() {
     alert(key);
 
     alert(key.slice(-1));
+    alert(key.slice(-2));
 
     const sort_key = parseInt(key.slice(-1));
     let key_list = key.match(/\d+/g);
