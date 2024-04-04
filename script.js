@@ -30,6 +30,8 @@ function decrypt() {
       sort_number += sort_key * 2;
     }
 
+    alert(key_list);
+
     for (let char of key_list) {
       encrypted_chars += chars_to_use[parseInt(char)];
       chars_to_use = chars_to_use.slice(0, parseInt(char)) + chars_to_use.slice(parseInt(char) + 1);
