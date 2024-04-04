@@ -26,7 +26,7 @@ function decrypt() {
 
     let sort_number = 0;
     while (sort_number + sort_key < key_list.length) {
-      sortChars(key_list, sort_number + sort_key, sort_number);
+      key_list = sortChars(key_list, sort_number + sort_key, sort_number);
       sort_number += sort_key * 2;
     }
 
