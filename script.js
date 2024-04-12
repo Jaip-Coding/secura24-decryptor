@@ -41,6 +41,8 @@ function decrypt() {
       }
     }
 
+    decrypted_result = decrypted_result.slice(0, -1);
+
     document.getElementById('resultOutput').innerText = decrypted_result;
 }
 
