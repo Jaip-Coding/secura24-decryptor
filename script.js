@@ -7,12 +7,12 @@ function sortChars(list, char1, char2) {
 }
 
 function decrypt() {
-    const possible_chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!"§$%&/()=?+*#-_.:,;<>@ ';
+    const possible_chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!"§$%&/()=?+*#-_.:,;<>@ \n';
     let chars_to_use = possible_chars;
     let encrypted_chars = '';
     let key = document.getElementById('keyInput').innerText;
-    let user_input = document.getElementById('userInput').innerText;
-    //let user_input = get_user_input.replace("\\n", "\n");
+    let get_user_input = document.getElementById('userInput').innerText;
+    let user_input = get_user_input.replace("\\n", "\n");
 
     let sort_key = parseInt(key.slice(-1));
     if (isNaN(sort_key)) {
